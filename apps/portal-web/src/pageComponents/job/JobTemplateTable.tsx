@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2022 Peking University and Peking University Institute for Computing and Digital Economy
- * SCOW is licensed under Mulan PSL v2.
+ * OpenSCOW is licensed under Mulan PSL v2.
  * You can use this software according to the terms and conditions of the Mulan PSL v2.
  * You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
@@ -187,13 +187,16 @@ const InfoTable: React.FC<InfoTableProps> = ({
       title: t("button.actionButton"),
       render:(_, r) => (
         <Space>
-          <Link href={{
-            pathname: "/jobs/submit",
-            query: {
-              cluster: cluster.id,
-              jobTemplateId: r.id,
-            },
-          }}
+          <Link
+            href={{
+              pathname: "/jobs/submit",
+              query: {
+                cluster: cluster.id,
+                jobTemplateId: r.id,
+              },
+            }}
+            onClick={r.jobName === "unknown" ? (e) => e.preventDefault() : undefined}
+            style={r.jobName === "unknown" ? { color: "grey", cursor: "not-allowed" } : {}}
           >
             {t(p("useTemplate"))}
           </Link>
@@ -217,7 +220,16 @@ const InfoTable: React.FC<InfoTableProps> = ({
           >
             <a>{t("button.deleteButton")}</a>
           </Popconfirm>
-          <a onClick={() => { setTemplateId(r.id); setModalShow(true); }}>{t("button.renameButton")}</a>
+          <a
+            style={r.jobName === "unknown" ? { color: "grey", cursor: "not-allowed" } : {}}
+            onClick={() => {
+              if (r.jobName === "unknown") return;
+
+              setTemplateId(r.id); setModalShow(true);
+            }}
+          >
+            {t("button.renameButton")}
+          </a>
         </Space>
       ),
     },
@@ -241,7 +253,7 @@ const InfoTable: React.FC<InfoTableProps> = ({
           showSizeChanger: true,
           defaultPageSize: DEFAULT_PAGE_SIZE,
         }}
-        rowKey={(x) => x.jobName}
+        rowKey={(x) => x.id}
       />
     </>
   );

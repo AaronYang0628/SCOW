@@ -1,6 +1,6 @@
 {
   "name": "@scow/lib-web",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "",
   "main": "index.js",
   "private": true,
@@ -54,5 +54,5 @@
   },
   "author": "PKUHPC (https://github.com/PKUHPC)",
   "license": "Mulan PSL v2",
-  "repository": "https://github.com/PKUHPC/SCOW"
+  "repository": "https://github.com/PKUHPC/OpenSCOW"
 }

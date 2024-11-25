@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2022 Peking University and Peking University Institute for Computing and Digital Economy
- * SCOW is licensed under Mulan PSL v2.
+ * OpenSCOW is licensed under Mulan PSL v2.
  * You can use this software according to the terms and conditions of the Mulan PSL v2.
  * You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
@@ -145,7 +145,7 @@ export default {
     },
   },
 
-  footer: "Powered by SCOW",
+  footer: "Powered by OpenSCOW",
 
   runningJob: {
     title: "本用户未结束的作业",
@@ -273,6 +273,7 @@ export default {
         setAmount:"设置封锁阈值",
         blockThresholdAmount: "封锁阈值",
         curBlockThresholdAmount: "当前封锁阈值",
+        defaultBlockThresholdAmount: "租户默认封锁阈值",
         curDefaultBlockThresholdAmount: "当前租户默认封锁阈值: ",
         useDefaultBlockThresholdAmount: "使用租户默认封锁阈值",
         confirmUseDefaultBlockThresholdAmount: "确认使用租户默认封锁阈值？",

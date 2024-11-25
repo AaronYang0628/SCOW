@@ -1,6 +1,6 @@
 {
   "name": "@scow/audit-server",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "description": "",
   "private": true,
   "main": "build/index.js",
@@ -21,7 +21,7 @@
   "keywords": [],
   "author": "PKUHPC (https://github.com/PKUHPC)",
   "license": "Mulan PSL v2",
-  "repository": "https://github.com/PKUHPC/SCOW",
+  "repository": "https://github.com/PKUHPC/OpenSCOW",
   "dependencies": {
     "@ddadaal/tsgrpc-server": "0.19.5",
     "@ddadaal/tsgrpc-common": "0.2.5",

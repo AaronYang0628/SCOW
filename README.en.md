@@ -1,14 +1,14 @@
-# <img src="apps/portal-web/assets/icons/192.png" height="30px" /> SCOW - Super Computing On Web
+# <img src="apps/portal-web/assets/icons/192.png" height="30px" /> OpenSCOW - Super Computing On Web
 
-![Docs](https://github.com/PKUHPC/SCOW/actions/workflows/docs.yaml/badge.svg)
-![Build](https://github.com/PKUHPC/SCOW/actions/workflows/test-build-publish.yaml/badge.svg)
+![Docs](https://github.com/PKUHPC/OpenSCOW/actions/workflows/docs.yaml/badge.svg)
+![Build](https://github.com/PKUHPC/OpenSCOW/actions/workflows/test-build-publish.yaml/badge.svg)
 [![codecov](https://codecov.io/gh/PKUHPC/SCOW/branch/master/graph/badge.svg?token=S9JCB2DXML)](https://codecov.io/gh/PKUHPC/SCOW)
 
 [中文README](./README.md)
 
 ## Overview
 
-SCOW is an HPC portal and management information system (MIS) for HPC users and system administrators. 
+OpenSCOW is an HPC portal and management information system (MIS) for HPC users and system administrators. 
 
 **HPC portal** enables HPC users to access HPC resources with only a modern browser anywhere, anytime and with any device, providing the following features through a web interface:
 
@@ -25,7 +25,7 @@ SCOW is an HPC portal and management information system (MIS) for HPC users and 
 
 ## Demo
 
-A full feature slurm + SCOW cluster is available at https://hpc.pku.edu.cn/demo/scow.
+A full feature slurm + OpenSCOW cluster is available at https://hpc.pku.edu.cn/demo/scow.
 
 Credentials:
 
@@ -34,7 +34,7 @@ Credentials:
 | Normal User | `demo_user`  | `demo_user`  |
 | Full Admin  | `demo_admin` | `demo_admin` |
 
-Further information about demo cluster can be found [here](https://pkuhpc.github.io/SCOW/docs/info#%E4%BD%93%E9%AA%8C%E7%8E%AF%E5%A2%83).
+Further information about demo cluster can be found [here](https://pkuhpc.github.io/OpenSCOW/docs/info#%E4%BD%93%E9%AA%8C%E7%8E%AF%E5%A2%83).
 
 ## Features
 
@@ -45,15 +45,15 @@ Further information about demo cluster can be found [here](https://pkuhpc.github
 
 ## Documentation
 
-For more details about SCOW, including how to deploy SCOW, please checkout https://pkuhpc.github.io/SCOW.
+For more details about OpenSCOW, including how to deploy OpenSCOW, please checkout https://pkuhpc.github.io/OpenSCOW.
 
 ## Contribution
 
-Follow [Contribution Guide](https://pkuhpc.github.io/SCOW/docs/contribution) to learn how to contribute to the project.
+Follow [Contribution Guide](https://pkuhpc.github.io/OpenSCOW/docs/contribution) to learn how to contribute to the project.
 
 ## License
 
-SCOW is distributed under [Mulan Permissive Software License, Version 2](http://license.coscl.org.cn/MulanPSL2).
+OpenSCOW is distributed under [Mulan Permissive Software License, Version 2](http://license.coscl.org.cn/MulanPSL2).
 
 ## Join SCOW Tech Group with a QR Scan
 

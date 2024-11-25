@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2022 Peking University and Peking University Institute for Computing and Digital Economy
- * SCOW is licensed under Mulan PSL v2.
+ * OpenSCOW is licensed under Mulan PSL v2.
  * You can use this software according to the terms and conditions of the Mulan PSL v2.
  * You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
@@ -97,7 +97,7 @@ console.log("Generate changelog for version %s", rootPackageJson.version);
 
 const getChangesetLine = (line) =>
   `- ${line.content}` +
-  ` ([${line.gitCommit.substring(0, 8)}](https://github.com/PKUHPC/SCOW/commit/${line.gitCommit}))`;
+  ` ([${line.gitCommit.substring(0, 8)}](https://github.com/PKUHPC/OpenSCOW/commit/${line.gitCommit}))`;
 
 /**
  * Generate changelog content for a package

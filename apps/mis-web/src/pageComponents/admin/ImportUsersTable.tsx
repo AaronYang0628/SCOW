@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2022 Peking University and Peking University Institute for Computing and Digital Economy
- * SCOW is licensed under Mulan PSL v2.
+ * OpenSCOW is licensed under Mulan PSL v2.
  * You can use this software according to the terms and conditions of the Mulan PSL v2.
  * You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
@@ -140,6 +140,9 @@ export const ImportUsersTable: React.FC = () => {
                 Router.push({ query: { cluster: value.id } });
               }}
             />
+            <Form.Item name="whitelist" valuePropName="checked">
+              <Checkbox>{t(p("addWhitelist"))}</Checkbox>
+            </Form.Item>
             <Button type="primary" htmlType="submit" loading={loading}>
               {t(pCommon("import"))}
             </Button>
@@ -222,9 +225,7 @@ export const ImportUsersTable: React.FC = () => {
             )}
           />
         </Table>
-        <Form.Item name="whitelist" valuePropName="checked">
-          <Checkbox>{t(p("addWhitelist"))}</Checkbox>
-        </Form.Item>
+
         <Drawer
           placement="right"
           onClose={() => setusersList(undefined)}

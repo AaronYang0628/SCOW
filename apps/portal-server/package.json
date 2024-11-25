@@ -1,6 +1,6 @@
 {
   "name": "@scow/portal-server",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "",
   "main": "build/index.js",
   "private": true,
@@ -19,7 +19,7 @@
   ],
   "author": "PKUHPC (https://github.com/PKUHPC)",
   "license": "Mulan PSL v2",
-  "repository": "https://github.com/PKUHPC/SCOW",
+  "repository": "https://github.com/PKUHPC/OpenSCOW",
   "dependencies": {
     "@connectrpc/connect": "1.4.0",
     "@ddadaal/tsgrpc-common": "0.2.5",
@@ -47,7 +47,7 @@
     "shell-quote": "1.8.1",
     "ts-log": "2.2.5",
     "uuid": "10.0.0",
-    "wait-on": "7.2.0"
+    "wait-on": "8.0.0"
   },
   "devDependencies": {
     "@types/node-cron": "3.0.11",

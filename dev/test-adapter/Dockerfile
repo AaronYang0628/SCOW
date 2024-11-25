@@ -1,5 +1,5 @@
 # Copyright (c) 2022 Peking University and Peking University Institute for Computing and Digital Economy
-# SCOW is licensed under Mulan PSL v2.
+# OpenSCOW is licensed under Mulan PSL v2.
 # You can use this software according to the terms and conditions of the Mulan PSL v2.
 # You may obtain a copy of Mulan PSL v2 at:
 #          http://license.coscl.org.cn/MulanPSL2
@@ -9,7 +9,7 @@
 # See the Mulan PSL v2 for more details.
 
 
-FROM node:iron-alpine@sha256:375518d70893d14665b99393079e77bd4947884f123a66ade28744eb8340d229 AS base
+FROM node:iron-alpine@sha256:558a6416c5e0da2cb0f19bbc766f0a76825a7e76484bc211af0bb1cedbb7ca1e AS base
 
 RUN apk update && apk add libc6-compat python3 make gcc g++ git
 

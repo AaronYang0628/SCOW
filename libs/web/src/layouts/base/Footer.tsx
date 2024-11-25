@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2022 Peking University and Peking University Institute for Computing and Digital Economy
- * SCOW is licensed under Mulan PSL v2.
+ * OpenSCOW is licensed under Mulan PSL v2.
  * You can use this software according to the terms and conditions of the Mulan PSL v2.
  * You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
@@ -30,15 +30,15 @@ interface Props {
 export const Footer: React.FC<Props> = ({ text, versionTag }) => {
 
   const versionTagLink = versionTag
-    ? `https://github.com/PKUHPC/SCOW/releases/tag/${versionTag}`
+    ? `https://github.com/PKUHPC/OpenSCOW/releases/tag/${versionTag}`
     : "";
 
   return (
     <>
       <FooterContainer>
         <span>Powered by&nbsp;
-          <a href="https://github.com/PKUHPC/SCOW" target="_blank">
-            SCOW
+          <a href="https://github.com/PKUHPC/OpenSCOW" target="_blank">
+            OpenSCOW
           </a>
           &nbsp;
           <a href={versionTagLink} target="_blank">

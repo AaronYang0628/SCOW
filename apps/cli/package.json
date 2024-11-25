@@ -1,6 +1,6 @@
 {
   "name": "@scow/cli",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "CLI to manage SCOW",
   "main": "build/index.js",
   "bin": "build/index.js",
@@ -36,7 +36,7 @@
   },
   "author": "PKUHPC (https://github.com/PKUHPC)",
   "license": "Mulan PSL v2",
-  "repository": "https://github.com/PKUHPC/SCOW",
+  "repository": "https://github.com/PKUHPC/OpenSCOW",
   "keywords": [],
   "volta": {
     "extends": "../../package.json"

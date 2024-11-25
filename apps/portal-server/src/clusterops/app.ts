@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2022 Peking University and Peking University Institute for Computing and Digital Economy
- * SCOW is licensed under Mulan PSL v2.
+ * OpenSCOW is licensed under Mulan PSL v2.
  * You can use this software according to the terms and conditions of the Mulan PSL v2.
  * You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
@@ -350,7 +350,16 @@ export const appOps = (cluster: string): AppOps => {
           }
 
           const content = await sftpReadFile(sftp)(metadataPath);
-          const sessionMetadata = JSON.parse(content.toString()) as SessionMetadata;
+
+          let sessionMetadata: SessionMetadata | undefined;
+
+          try {
+            sessionMetadata = JSON.parse(content.toString()) as SessionMetadata;
+          } catch (error) {
+            logger.error("Parsing JSON failed, the content is %s,the error is %o",content.toString(),error);
+          }
+
+          if (!sessionMetadata) return;
 
           const runningJobInfo: JobInfo | undefined = runningJobInfoMap[sessionMetadata.jobId];
 
@@ -371,10 +380,17 @@ export const appOps = (cluster: string): AppOps => {
               const infoFilePath = join(jobDir, SERVER_SESSION_INFO);
               if (await sftpExists(sftp, infoFilePath)) {
                 const content = await sftpReadFile(sftp)(infoFilePath);
-                const serverSessionInfo = JSON.parse(content.toString()) as ServerSessionInfoData;
 
-                host = serverSessionInfo.HOST;
-                port = serverSessionInfo.PORT;
+                let serverSessionInfo: ServerSessionInfoData | undefined;
+
+                try {
+                  serverSessionInfo = JSON.parse(content.toString()) as ServerSessionInfoData;
+                  host = serverSessionInfo.HOST;
+                  port = serverSessionInfo.PORT;
+                } catch (error) {
+                  logger.error("Parsing JSON failed, the content is %s,the error is %o",content.toString(),error);
+                }
+
               }
             } else {
             // for vnc apps,

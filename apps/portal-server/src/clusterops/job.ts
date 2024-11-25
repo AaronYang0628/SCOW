@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2022 Peking University and Peking University Institute for Computing and Digital Economy
- * SCOW is licensed under Mulan PSL v2.
+ * OpenSCOW is licensed under Mulan PSL v2.
  * You can use this software according to the terms and conditions of the Mulan PSL v2.
  * You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
@@ -74,13 +74,20 @@ export const jobOps = (cluster: string): JobOps => {
 
         const results = await Promise.all(list.map(async ({ filename }) => {
           const content = await sftpReadFile(sftp)(join(portalConfig.savedJobsDir, filename));
-          const data = JSON.parse(content.toString()) as JobMetadata;
+
+          let data: JobMetadata | object = {};
+
+          try {
+            data = JSON.parse(content.toString()) as JobMetadata;
+          } catch (error) {
+            logger.error("Parsing JSON failed, the content is %s,the error is %o",content.toString(),error);
+          }
 
           return {
             id: filename,
-            submitTime: new Date(data.submitTime),
-            comment: data.comment,
-            jobName: data.jobName,
+            submitTime: ("submitTime" in data && data.submitTime) ? new Date(data.submitTime) : new Date(),
+            comment: ("comment" in data && data.comment) ? data.comment : "无法解析的内容",
+            jobName: ("jobName" in data && data.jobName) ? data.jobName : "unknown",
           } as JobTemplateInfo;
         }));
 

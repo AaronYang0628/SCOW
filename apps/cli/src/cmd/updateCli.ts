@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2022 Peking University and Peking University Institute for Computing and Digital Economy
- * SCOW is licensed under Mulan PSL v2.
+ * OpenSCOW is licensed under Mulan PSL v2.
  * You can use this software according to the terms and conditions of the Mulan PSL v2.
  * You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
@@ -30,7 +30,7 @@ interface Options {
 }
 
 const owner = "PKUHPC";
-const repo = "SCOW";
+const repo = "OpenSCOW";
 const workflow_id = "test-build-publish.yaml";
 
 const allowedArch = ["x64", "arm64"];
@@ -128,7 +128,7 @@ Please provide your GitHub personal access token via GITHUB_TOKEN in env or .env
 
     const artifacts = await octokit.rest.actions.listWorkflowRunArtifacts({ owner, repo, run_id: latestRun.id });
 
-    const artifactName = "scow-cli-" + arch;
+    const artifactName = "openscow-cli-" + arch;
 
     const artifact = artifacts.data.artifacts.find((a) => a.name === artifactName);
 

@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2022 Peking University and Peking University Institute for Computing and Digital Economy
- * SCOW is licensed under Mulan PSL v2.
+ * OpenSCOW is licensed under Mulan PSL v2.
  * You can use this software according to the terms and conditions of the Mulan PSL v2.
  * You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
@@ -13,7 +13,7 @@
 import { visit } from "unist-util-visit";
 
 const ORGANIZATION_NAME = "PKUHPC";
-const PROJECT_NAME = "SCOW";
+const PROJECT_NAME = "OpenSCOW";
 // gitee or github
 const GIT_PLATFORM = process.env.GIT_PLATFORM || "github";
 const CR_URL = process.env.CR_URL || "ccimage.pku.edu.cn/chenjunda/scow";
